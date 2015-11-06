@@ -1,0 +1,109 @@
+@media (max-width: 600px) {
+    body {
+      width: 80%;
+      margin: 0 auto 1em auto;
+    }
+  }
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #FFEEFF;
+  max-width: 800px;
+  margin: 0 auto 1em auto;
+}
+
+h1, h2, h4 {
+  /*line-height: .7em;*/
+  margin: 0;
+  font-family: 'Bitter', serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h3 {
+  margin: 1em 0 0 0;
+}
+
+h4 {
+  font-style: italic;
+  font-size: .9em;
+}
+
+.heading {
+  font-size: .85em;
+}
+
+ul {
+  margin: 0;
+  padding: 0 .2em;
+}
+
+p, li {
+  font-size: .85em;
+}
+
+li {
+  list-style-type: none;
+}
+
+.experience li {
+  width: 95%;
+  margin: 0 auto;
+  font-size: 1em;
+}
+
+#celeen-rusk {
+  /*line-height: .0em;*/
+  margin: 1em 0 .1em 0;
+}
+
+
+li {
+  padding: 0;
+}
+
+/*.contact {
+  list-style: none; 
+}
+.contact li {
+  list-style-type: none;
+  margin: 0;
+}*/
+
+/*.contact p, .contact li {
+  font-size: .85em;
+}*/
+.projects li {
+  display: inline-block;
+  padding: 0;
+}
+
+hr {
+  margin: 1em 0;
+}
+
+.center {
+  text-align: center;
+  font-family: 'Bitter', serif;
+}
+
+.hidden {
+  display: none;
+}
+
+
+a {
+  color: green;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #CC00CC;
+}
+
+.experience {
+  /*list-style-type: disc inside;*/
+}

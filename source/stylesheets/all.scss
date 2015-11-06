@@ -1,0 +1,137 @@
+@import "meyer-reset";
+@import "bourbon";
+@import "neat";
+
+html {font-size: 62.5%;}
+
+body {
+  font-size: 1.5em;
+  font-family: "Cabin", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  h1, h2, h3 {
+    font-family: "Raleway";
+    font-weight: 700;
+  }
+  h1 {color: green;}
+  h2 {color: deeppink;}
+  h3 {color: skyblue;}
+}
+
+header {
+  @include outer-container;
+  position: relative;
+  padding-top: 2rem;
+
+  .title {
+    @include span-columns(6);
+    font-size: 2.75rem;
+  }
+
+  nav {
+    @include shift(6);
+    float:right;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+nav {
+  @include span-columns(6);
+  @include shift(6);
+  text-align: center;
+  font-size: 2.7rem;
+
+  li { 
+    @include span-columns(2 of 6);
+    display: inline-block;
+  }
+}
+
+.hello {
+  @include outer-container;
+  text-align: center;
+  
+  nav {
+    padding-top: 2rem;
+    @include span-columns(6);
+    @include shift(3);
+  }
+
+  section {margin: 12% auto 3% auto;}
+  
+  h1 {
+    font-size: 11rem;
+    margin: 0 auto;
+    line-height: 85%;
+  }
+
+  h2 {margin-top: 1rem;}
+
+  h3 {
+    font-size: 2.1rem;
+    margin-top: .5rem;
+  }
+}
+
+.main {
+  margin: 7% auto;
+  @include outer-container;
+  
+  h3 {
+    margin: -1% 1%;
+    font-size: 5rem;
+    @include shift(2);
+  }
+  
+  article {
+    text-align: justify;
+    color: darkslategrey;
+    line-height: 120%;
+    font-size: 1.75rem;
+    margin: 1% auto;
+    @include span-columns(5.5);
+    @include shift(2);
+  }
+  
+  aside {@include span-columns(2.5);}
+  
+  img { 
+    margin-top: 15%;    
+    border-radius: 100%;
+  }
+  
+  strong {font-weight: 700;}
+
+  li {margin: 4% 0;}
+}
+
+/******* Links & Text Selection *****/
+a {
+  color: deeppink;
+  text-decoration: none;
+  
+  &:active {
+    background: yellow;
+    border: 1px dotted green;
+  }
+
+  // &:hover {color: skyblue;}
+  
+  &.standout { 
+    color: deeppink;
+    &:hover {color: deeppink;}
+  }
+  
+  &.hidden { 
+    color: darkslategrey;
+    &:hover {color: darkslategrey; } 
+  }
+}
+
+::selection, ::selection {
+  background: yellow;
+}
+
+::-moz-selection, ::-moz-selection {
+  background: yellow;
+}
+

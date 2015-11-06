@@ -1,0 +1,14 @@
+---
+title: Contact Celeen
+---
+
+<%= partial "header" %>
+
+<section class="main">
+  <h3>Contact</h3>
+  <article>
+    <p>I'd love to receive any general questions, feedback, or shoutouts via <%= mail_to 'hello+website@celeen.info', 'email', class: 'standout' %> or <%= link_to 'twitter', 'https://twitter.com/celeenr', target: '_blank', class: 'standout' %>.</p>
+    <br>
+    <p><strong>I'm looking for full-time work right now!</strong> If you like what you see so far, <%= mail_to 'hello+website@celeen.info', 'email', class: 'standout' %> me! You can also take a look at my <%= link_to 'resume', 'resume.html', class: 'standout' %>, <%= link_to 'github', 'https://www.github.com/celeen', target: '_blank', class: 'standout' %>, or visit my <%= link_to 'LinkedIn', 'https://www.linkedin.com/in/celeen', target: '_blank', class: 'standout' %> profile. I'd love to hear from you!</p>
+  </article>
+</section>
