@@ -1,7 +1,7 @@
 @import "bourbon";
 @import "neat-helpers";
 
-$visual-grid: true;
+// $visual-grid: true;
 $visual-grid-color: #E6F6FF;
 
 //Breakpoints
@@ -16,7 +16,7 @@ $mobile: new-breakpoint(max-width 650px, 3);
 html {font-size: 62.5%;}
 
 body {
-  margin: 4%;
+  margin: 0 4%;
   font-size: 1.5em;
   font-family: "Cabin", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   h1, h2, h3 {
