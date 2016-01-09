@@ -184,6 +184,7 @@ a {
   nav {
     @include span-columns(3);
     li {@include span-columns(1 of 3);}
+    li a {font-size: 75%;}
   }
   .hello {
     nav {
