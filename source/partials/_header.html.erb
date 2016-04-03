@@ -1,6 +1,9 @@
 <header>
   <div class = "title">
-    <h1><%= link_to 'Celeen Rusk', 'index.html' %></h1>
+    <h1><% link_to '/' do %>
+      <i class = "fa fa-home"></i>
+    <% end %>
+    </h1>
   </div>
   <%= partial 'nav' %>
 </header>

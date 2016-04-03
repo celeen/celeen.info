@@ -58,18 +58,18 @@ set :images_dir, 'images'
 set :partials_dir, 'partials'
 
 page "resume.html", :layout => "resume"
+page "writing/index.html", :layout => "writing"
+page "index.html", :layout => "homepage"
 
 activate :directory_indexes
 activate :livereload
 
 activate :deploy do |deploy|
   deploy.method = :git
-  # Optional Settings
   deploy.remote = 'git@github.com:celeen/celeen.github.io.git'
   deploy.branch   = 'master' # default: gh-pages
-  # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
-  # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
 end
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -88,13 +88,31 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 end
 
+activate :blog do |blog|
+  # This will add a prefix to all links, template references and source paths
+  blog.prefix = "writing"
 
-# activate :deploy do |deploy|
-#   deploy.deploy_method = :git
-#   # Optional Settings
-#   deploy.remote   = 'livesite' # remote name or git url, default: origin
-#   deploy.branch   = 'test' # default: gh-pages
-#   # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
-#   # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
-# end
+  # blog.permalink = "{year}/{month}/{day}/{title}.html"
+  # Matcher for blog source files
+  blog.sources = "{year}-{month}-{day}-{title}.html"
+  # blog.taglink = "tags/{tag}.html"
+  # blog.layout = "layout"
+  # blog.summary_separator = /(READMORE)/
+  blog.summary_generator = Proc.new do |article, rendered|
+    summary = rendered[3..-6]
+    blog.summary_length ? summary[0..blog.summary_length] + "..." : summary
+  end
+  blog.summary_length = 250
+  # blog.year_link = "{year}.html"
+  # blog.month_link = "{year}/{month}.html"
+  # blog.day_link = "{year}/{month}/{day}.html"
+  # blog.default_extension = ".markdown"
 
+  blog.tag_template = "tag.html"
+  # blog.calendar_template = "calendar.html"
+
+  # Enable pagination
+  # blog.paginate = true
+  # blog.per_page = 10
+  # blog.page_link = "page/{num}"
+end

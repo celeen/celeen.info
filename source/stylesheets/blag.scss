@@ -1,0 +1,39 @@
+@import "bourbon";
+@import "neat-helpers";
+
+// $visual-grid: true;
+$visual-grid-color: #E6F6FF;
+
+//Breakpoints
+
+$mobile: new-breakpoint(max-width 650px, 3);
+
+// @import 'grid_settings';
+@import "neat";
+
+header > h1 {
+}
+.main {
+  h3 {
+    @include span-columns(6.5);
+  }
+  article {
+    @include span-columns(6.5);
+    // margin-top: 3%;
+  }
+
+  li, .title { 
+    // width: 49%;
+    display: inline-block;
+  }
+
+  .leaf {
+    h4 { 
+      color: deeppink;
+      font-size: 2rem;
+    }
+    color: darkslategrey; 
+  }
+}
+
+

@@ -11,7 +11,8 @@ $mobile: new-breakpoint(max-width 650px, 3);
 // @import 'grid_settings';
 @import "meyer-reset";
 @import "neat";
-
+@import "font-awesome-compass";
+@import "font-awesome";
 
 html {font-size: 62.5%;}
 
@@ -34,7 +35,7 @@ header {
   padding-top: 2rem;
 
   .title {
-    a {color: green;}
+    a {color: darkslategrey;}
     @include span-columns(6);
     font-size: 2.75rem;
   }
@@ -44,6 +45,7 @@ header {
     float:right;
     position: absolute;
     bottom: 0;
+    a { color: deeppink;}
   }
 }
 
@@ -52,51 +54,13 @@ nav {
   @include shift(6);
   text-align: center;
   font-size: 2.7rem;
-  // @include media($mobile) {
-  //   @include span-columns(3);
-  // }
 
   li { 
     @include span-columns(2 of 6);
     display: inline-block;
-    // @include media($mobile) {
-    //   @include span-columns(1 of 3);
-    // }
   }
 }
 
-.hello {
-  @include outer-container;
-  text-align: center;
-  
-  nav {
-    // @include media($mobile) {
-    //   @include span-columns(2);
-    // }
-    padding-top: 2rem;
-    @include span-columns(6);
-    @include shift(3);
-    // @include media($mobile) {
-    //   @include span-columns(3);
-    //   @include shift(0);
-    // }
-  }
-
-  section {margin: 12% auto 3% auto;}
-  
-  h1 {
-    font-size: 11rem;
-    margin: 0 auto;
-    line-height: 85%;
-  }
-
-  h2 {margin-top: 1rem;}
-
-  h3 {
-    font-size: 2.1rem;
-    margin-top: .5rem;
-  }
-}
 
 .main {
   .mobile { display: none;}
@@ -106,6 +70,7 @@ nav {
   h3 {
     margin: -1% 1%;
     font-size: 5rem;
+    @include span-columns(5.5);
     @include shift(2);
   }
   

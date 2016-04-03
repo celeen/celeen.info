@@ -1,0 +1,17 @@
+<section class = "main">
+  <h3>Stronger Trees</h3>
+  <article>
+    <ul>
+    <% page_articles.each do |post| %>
+      <% link_to post do %>
+        <li>
+        <div class = "leaf">
+          <h4><%= post.title %></h4> <%= post.summary %>
+      </div>
+        </li>
+    <% end %>
+  <% end %>
+    </ul>
+  </article>
+  <!-- </section> -->
+</section>

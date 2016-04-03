@@ -10,12 +10,11 @@
     <title><%= current_page.data.title || "The Middleman" %></title>
     <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
-    <%= stylesheet_link_tag "normalize", "all" %>
+    <%= stylesheet_link_tag "normalize", "all", "homepage" %>
     <%= javascript_include_tag  "all" %>
   </head>
 
   <body class="<%= page_classes %>">
-    <%= partial "header"%>
     <%= yield %>
   </body>
 </html>
