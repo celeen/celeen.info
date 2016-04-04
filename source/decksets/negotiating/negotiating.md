@@ -55,6 +55,16 @@ Recognizing that I wouldn't be lost if that happens gives me more confidence neg
 
 ---
 
+# Intersection of three spaces
+
+1. *Umbrella Context*
+2. *What am I looking for?*
+3. *What are* they *looking for?*
+
+^ What is happening in other similar situations?
+
+---
+
 # *Ask for it*
 
 ---
