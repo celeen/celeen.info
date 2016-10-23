@@ -37,3 +37,11 @@ $mobile: new-breakpoint(max-width 650px, 3);
   }
 }
 
+@include media($mobile) {
+  .hello {
+    nav {
+      @include span-columns(3);
+      @include shift(0);
+    }
+  }
+}

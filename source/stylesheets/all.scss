@@ -51,7 +51,6 @@ header {
 
 nav {
   @include span-columns(6);
-  @include shift(6);
   text-align: center;
   font-size: 2.7rem;
 
@@ -150,12 +149,6 @@ a {
     @include span-columns(3);
     li {@include span-columns(1 of 3);}
     li a {font-size: 75%;}
-  }
-  .hello {
-    nav {
-      @include span-columns(3);
-      @include shift(0);
-    }
   }
   .main {
     .desktop {display: none;}
