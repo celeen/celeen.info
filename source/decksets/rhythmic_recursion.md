@@ -341,6 +341,7 @@ play_piece
 - Sonic Pi: *http://sonic-pi.net/*
 - The completed code: *https://github.com/celeen/clapping\_music/blob/master/clapping\_music.rb*
 - my slides: *https://github.com/celeen/celeen.info/blob/master/source/decksets/rhythmic_recursion.pdf*
+- Steve Reich, "Clapping Music"
 
 # Thanks To
 
